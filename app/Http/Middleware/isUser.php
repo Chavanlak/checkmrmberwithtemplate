@@ -13,10 +13,12 @@ class isUser{
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->role == 'user') {
+        if(Auth::user() && Auth::user()->userTypeId == 2){
             return $next($request);
+        }elseif(Auth::user() && Auth::user()->userTypeId == 1){
+            return redirect(to: '/showreport');
         }
-        return redirect('/login');
+        return redirect('/login')->with('message','กรุณาเข้าสู่ระบบ');
 }
 }
 ?>

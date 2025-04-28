@@ -18,5 +18,8 @@ class UserRepository{
         return $user->save();
 
     }
+    public static function getallmembers(){
+        return User::all();
+    }
 }
 ?>

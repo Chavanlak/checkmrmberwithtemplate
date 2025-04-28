@@ -74,7 +74,7 @@
           </a>
         </li> --}}
                 <li class="nav-item">
-                    <a class="nav-link " href="/register">
+                    <a class="nav-link " href="/Adminregister">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-calendar-grid-58 text-dark text-sm opacity-10"></i>
@@ -92,10 +92,10 @@
                     </a>
                 </li>
 
-                <li class="nav-item mt-3">
+                {{-- <li class="nav-item mt-3">
                     <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account pages</h6>
-                </li>
-                <li class="nav-item">
+                </li> --}}
+                {{-- <li class="nav-item">
                     <a class="nav-link " href="../pages/profile.html">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
@@ -121,7 +121,7 @@
                         </div>
                         <span class="nav-link-text ms-1">Sign Up</span>
                     </a>
-                </li>
+                </li> --}}
             </ul>
         </div>
 
@@ -155,7 +155,7 @@
                                 <img src="{{ asset('images/admin2.jpg') }}" alt="profile"
                                     style="width: 40px; height: 40px; border-radius: 50%;" />
                                 <span class="ms-2 me-1">Admin</span>
-                                <i class="mdi mdi-chevron-down"></i>
+                                {{-- <i class="mdi mdi-chevron-down"></i> --}}
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end navbar-dropdown shadow"
                                 aria-labelledby="profileDropdown">

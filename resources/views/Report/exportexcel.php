@@ -1,17 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>exportExcel</title>
-</head>
-<body>
-    <form action="/export" method="GET">
-        <h1>Download Excel</h1>
-        <input type="submit" value="dowload excel">
-    </form>
-</body>
-</html> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -3,16 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExportController;
 use App\Http\Controllers\AuthController;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('dashbord.test');
@@ -42,17 +33,17 @@ Route::get('/changepassword', function () {
 Route::get('/Adminregister', function () {
     return view('auth/registerByAdmin');
 });
-Route::get('/changepasswordAdmin', function () {
-    return view('dashbord/changepasswordbyAdmin');
-});
+// Route::get('/changepasswordAdmin', function () {
+//     return view('dashbord/changepasswordbyAdmin');
+// });
 Route::get('/post', function () {
     return view('dashbord/changepasswordbyAdminPost');
 });
 Route::get('/guest', function () {
     return view('layout/guestlayout');
 });
-Route::get('/showreport',[ExportController::class,'exportExcel']);
-Route::get('/export',[ExportController::class,'exportReport']);
+// Route::get('/showreport',[ExportController::class,'exportExcel']);
+// Route::get('/export',[ExportController::class,'exportReport']);
 Route::get('/register',[AuthController::class,'register'])->name('register');
     Route::post('/register',[AuthController::class,'registerPost']);
 
@@ -61,3 +52,16 @@ Route::post('/loginpost',[AuthController::class,'loginPost']);
 Route::get('/authmain',[AuthController::class,'authMain']);
 Route::get('/loginerror',[AuthController::class,'loginError'])->name('login.error');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+// Route::get('/showuser',[UserController::class,'getalluser']);
+Route::get('/changepasswordAdmin',[UserController::class,'getalluser']);
+
+Route::get('/userdash', function () {
+    return view('dashbord/userdashbord');
+});
+// Route::get('/userreport', function () {
+//     return view('Report/userreport');
+// });
+Route::get('/showreport',[ExportController::class,'exportExcel']);
+Route::get('/export',[ExportController::class,'exportReport']);
+

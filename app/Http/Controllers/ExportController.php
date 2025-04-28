@@ -15,7 +15,9 @@ class ExportController extends Controller
     // }
     public static function exportExcel()
     {
-        return view('Report/exportexcel');
+        // return view('Report/exportexcel');
+         return view(' Report/userreport');
+       
     }
 
   
@@ -70,7 +72,7 @@ class ExportController extends Controller
         $writer = new Xlsx($mySpreadsheet);
         // $writer->save('output.xlsx');
         header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-        header('Content-Disposition: attachment; filename="output.xlsx"');
+        header('Content-Disposition: attachment; filename="report.xlsx"');
         $writer->save('php://output');
 //         $fileName = 'output.xlsx';
 //         header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');

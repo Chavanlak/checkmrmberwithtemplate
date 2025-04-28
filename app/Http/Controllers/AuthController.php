@@ -10,11 +10,14 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
+    // public static function register(){
+    //     $userType = UserTypeRepository::getallUserType();
+    //     return view('register', compact('userType'));
+    // }
     public static function register(){
         $userType = UserTypeRepository::getallUserType();
         return view('register', compact('userType'));
     }
-   
     public static function registerPost(Request $request){
         $firstname = $request->firstname;
         $lastname = $request->lastname;
@@ -57,7 +60,7 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             return redirect('/showreport')->with('success', 'Login successful.');
-            // return redirect('/recipe')->with('success', 'Login successful.');
+            // return redirect('/home')->with('success', 'Login successful.');
         }
 
         return redirect('/loginerror')->with('error', 'Invalid credentials.');
@@ -65,7 +68,18 @@ class AuthController extends Controller
     }  
     public static function logout(){
         Auth::logout();
-        return redirect('/login')->with('success', 'Logout successful.');
+        return redirect('/login');
+        // return redirect('/login')->with('success', 'Logout successful.');
     }
+    public static function home(){
+        if(Auth::user() && Auth::user()->user_type_id == 1){
+            // return redirect('/admindash');
+            return redirect('/admin/dashbord');
+    }
+    elseif(Auth::user() && Auth::user()->user_type_id == 2){
+        // return redirect('/userdash');
+        return redirect('/user/dashbord');
+    }
+}
 
 }

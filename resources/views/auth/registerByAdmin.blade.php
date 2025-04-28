@@ -13,50 +13,62 @@
           <form>
             <div class="row mb-3">
               <div class="col-md-6">
-                <label for="firstname" class="form-label">Firstname</label>
+                <label for="firstname" class="form-label">ชื่อ</label>
                 <input type="text" class="form-control" id="firstname" name="firstname" required>
               </div>
               <div class="col-md-6">
-                <label for="lastname" class="form-label">Lastname</label>
+                <label for="lastname" class="form-label">นามสกุล</label>
                 <input type="text" class="form-control" id="lastname" name="lastname" required>
               </div>
             </div>
           
             <div class="row mb-3">
               <div class="col-md-8 col-lg-6">
-                <label for="email" class="form-label">Email</label>
+                <label for="email" class="form-label">อีเมล</label>
                 <input type="email" class="form-control" id="email" name="email" required>
               </div>
             </div>
           
             <div class="row mb-3">
               <div class="col-md-6 col-lg-4">
-                <label for="department" class="form-label">Department</label>
+                <label for="department" class="form-label">เเผนก</label>
                 <input type="text" class="form-control" id="department" name="department" required>
               </div>
             </div>
           
             <div class="row mb-3">
               <div class="col-md-6 col-lg-4">
-                <label for="username" class="form-label">Username</label>
+                <label for="username" class="form-label">รหัสพนักงาน</label>
                 <input type="text" class="form-control" id="username" name="username" required>
               </div>
             </div>
           
             <div class="row mb-3">
               <div class="col-md-6 col-lg-4">
-                <label for="password" class="form-label">Password</label>
+                <label for="password" class="form-label">รหัสผ่าน</label>
                 <input type="password" class="form-control" id="password" name="password" required>
               </div>
             </div>
           
             <div class="row mb-3">
               <div class="col-md-6 col-lg-4">
-                <label for="phone" class="form-label">Phone</label>
+                <label for="phone" class="form-label">เบอร์</label>
                 <input type="text" class="form-control" id="phone" name="phone" required>
               </div>
             </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6 col-lg-4">
+                <label for="phone" class="form-label">ประเภทผู้ใช้</label>
+                <select class="form-control form-control-lg" id="exampleFormControlSelect2" name="userTypeId">
+                  {{-- @foreach ($usertype as $type)
+                      <option value={{$type->userTypeId}}>{{$type->userTypeName}}</option>
+                  @endforeach --}}
+              </select>
+              </div>
+            </div>
           
+
             <div class="row">
               <div class="col-auto">
                 <button type="submit" class="btn btn-primary">Register</button>

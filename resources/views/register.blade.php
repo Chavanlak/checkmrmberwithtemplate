@@ -17,8 +17,11 @@
     <link rel="stylesheet" href="style.css" />
     <!-- Font Awesome CDN link for icons -->
     {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" /> --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
 
     <style>
         /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
@@ -164,41 +167,41 @@
         form .button input:hover {
             background: #5aaeec;
         }
+
         .row-double {
-    display: flex;
-    gap: 15px;
-}
+            display: flex;
+            gap: 15px;
+        }
 
-.col-half {
-    flex: 1;
-    position: relative;
-}
+        .col-half {
+            flex: 1;
+            position: relative;
+        }
 
-.col-half input {
-    width: 100%;
-    height: 50px;
-    padding-left: 60px;
-    border-radius: 5px;
-    border: 1px solid lightgrey;
-    font-size: 16px;
-}
+        .col-half input {
+            width: 100%;
+            height: 50px;
+            padding-left: 60px;
+            border-radius: 5px;
+            border: 1px solid lightgrey;
+            font-size: 16px;
+        }
 
-.col-half i {
-    position: absolute;
-    width: 45px;
-    height: 100%;
-    color: #fff;
-    font-size: 18px;
-    background: #5aaeec;
-    border: 1px solid #5aaeec;
-    border-radius: 5px 0 0 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    left: 0;
-}
-
+        .col-half i {
+            position: absolute;
+            width: 45px;
+            height: 100%;
+            color: #fff;
+            font-size: 18px;
+            background: #5aaeec;
+            border: 1px solid #5aaeec;
+            border-radius: 5px 0 0 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            left: 0;
+        }
     </style>
 </head>
 
@@ -219,15 +222,15 @@
 
             </div> --}}
             <div class="row row-double">
-              <div class="col-half">
-                  <i class="fas fa-user"></i>
-                  <input type="text" placeholder="ชื่อจริง" name="firstname" required />
-              </div>
-              <div class="col-half">
-                  <i class="fas fa-user"></i>
-                  <input type="text" placeholder="นามสกุล" name="lastname" required />
-              </div>
-          </div>
+                <div class="col-half">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="ชื่อจริง" name="firstname" required />
+                </div>
+                <div class="col-half">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="นามสกุล" name="lastname" required />
+                </div>
+            </div>
 
             <div class="row">
                 <i class="fas fa-envelope"></i>
@@ -248,12 +251,14 @@
             <div class="row">
                 <i class="fas fa-lock"></i>
                 {{-- <input type="text" placeholder="Email or Phone" required /> --}}
-                <input type="password" placeholder="รหัสผ่าน" name="password"  minlength="6" required/>
+                <input type="password" placeholder="รหัสผ่าน" name="password" minlength="6" required />
             </div>
-            <small style="color: #888; margin-top: -10px; display: block; font-size: 12px;">รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร</small>
+            <small style="color: #888; margin-top: -10px; display: block; font-size: 12px;">รหัสผ่านต้องมีอย่างน้อย 6
+                ตัวอักษร</small>
             <div class="row">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="ยืนยันรหัสผ่าน" name="password_confirmation" minlength="6" required />
+                <input type="password" placeholder="ยืนยันรหัสผ่าน" name="password_confirmation" minlength="6"
+                    required />
             </div>
 
             <div class="row">
@@ -264,24 +269,32 @@
             {{-- <div class="row">
 
 
-        <select name="userType" id="">
-          <option value="" disabled selected>ประเภทผู้ใช้</option>
-          <option value="admin">Admin</option>
-          <option value="member">Member</option>
-        </select>
-      </div> --}}
+                <select name="userType" id="">
+                    <option value="" disabled selected>ประเภทผู้ใช้</option>
+                    <option value="admin">Admin</option>
+                    <option value="member">User</option>
+                </select>
+            </div> --}}
+            <div class="form-group">
+                <label>ประเภทผู้ใช้</label>
+                <select class="form-control form-control-lg" id="exampleFormControlSelect2" name="userTypeId">
+                    @foreach ($userType as $type)
+                        <option value={{$type->userTypeId}}>{{$type->userTypeName}}</option>
+                    @endforeach
+                </select>
+            </div>
 
             {{-- <div class="pass"><a href="#">Forgot password?</a></div> --}}
             @if (session('success'))
                 <div class="text-success">ลงทะเบียนสำเร็จ!</div>
-            {{-- @else
+                {{-- @else
               <div class="text-warning">กรุณาลองอีกครั้ง!</div> --}}
             @endif
 
             <div class="row button">
                 <input type="submit" value="ลงทะเบียน" class="btn btn-primary" />
             </div>
-      
+
         </form>
     </div>
 </body>
