@@ -26,6 +26,7 @@ class AuthController extends Controller
         $password = $request->password;
         $department = $request->department;
         $phone = $request->phone;
+        $userTypeId = $request->userTypeId;
 
         UserRepository::save(
             $firstname,
@@ -34,7 +35,8 @@ class AuthController extends Controller
             $email,
             $password,
             $department,
-            $phone
+            $phone,
+            $userTypeId
         );
         // return redirect('/register')->with('ลงทะเบียนสำเร็จ');
         return redirect()->route('register')->with('success', 'ลงทะเบียนสำเร็จ!');
@@ -72,13 +74,13 @@ class AuthController extends Controller
         // return redirect('/login')->with('success', 'Logout successful.');
     }
     public static function home(){
-        if(Auth::user() && Auth::user()->user_type_id == 1){
-            // return redirect('/admindash');
-            return redirect('/admin/dashbord');
+        if(Auth::user() && Auth::user()->userTypeId == 1){
+            return redirect('/admindashbord');
+            // return redirect('/admin/dashbord');
     }
-    elseif(Auth::user() && Auth::user()->user_type_id == 2){
-        // return redirect('/userdash');
-        return redirect('/user/dashbord');
+    elseif(Auth::user() && Auth::user()->userTypeId == 2){
+        return redirect('/userdashbord');
+        // return redirect('/user/dashbord');
     }
 }
 

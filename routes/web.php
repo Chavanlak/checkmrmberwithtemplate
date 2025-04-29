@@ -45,7 +45,7 @@ Route::get('/guest', function () {
 // Route::get('/showreport',[ExportController::class,'exportExcel']);
 // Route::get('/export',[ExportController::class,'exportReport']);
 Route::get('/register',[AuthController::class,'register'])->name('register');
-    Route::post('/register',[AuthController::class,'registerPost']);
+    Route::post('/registerpost',[AuthController::class,'registerPost']);
 
 Route::get('/login',[AuthController::class,'login'])->name('login');
 Route::post('/loginpost',[AuthController::class,'loginPost']);

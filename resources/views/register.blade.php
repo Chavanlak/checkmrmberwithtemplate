@@ -208,7 +208,7 @@
 <body>
     <div class="wrapper">
         <div class="title"><span>ลงทะเบียนผู้ใช้</span></div>
-        <form action="/register" method="post">
+        <form action="/registerpost" method="post">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             {{-- <div class="row">
                 <i class="fas fa-user"></i>

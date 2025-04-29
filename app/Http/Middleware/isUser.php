@@ -16,7 +16,7 @@ class isUser{
         if(Auth::user() && Auth::user()->userTypeId == 2){
             return $next($request);
         }elseif(Auth::user() && Auth::user()->userTypeId == 1){
-            return redirect(to: '/showreport');
+            return redirect(to: '/home');
         }
         return redirect('/login')->with('message','กรุณาเข้าสู่ระบบ');
 }

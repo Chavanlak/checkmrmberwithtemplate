@@ -15,10 +15,10 @@ class isAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->userType == 1) {
+        if (Auth::check() && Auth::user()->userTypeId == 1) {
             return $next($request);
         }
-        elseif (Auth::check() && Auth::user()->userType == 2) {
+        elseif (Auth::check() && Auth::user()->userTypeId == 2) {
             return redirect('/home');
         }
         return redirect('/login')->with('message','กรุณาเข้าสู่ระบบ');
